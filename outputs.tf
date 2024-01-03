@@ -1,6 +1,6 @@
 output "kms_key" {
   description = "The KMS customer master key to encrypt state buckets."
-  value       = module.remote_state.kms_key.key_id
+  value       = module.remote_state.kms_key.arn
 }
 
 output "state_bucket" {
@@ -10,5 +10,5 @@ output "state_bucket" {
 
 output "dynamodb_table" {
   description = "The dynamodb table for state lock."
-  value       = module.remote_state.dynamodb_table
+  value       = module.remote_state.dynamodb_table.name
 }

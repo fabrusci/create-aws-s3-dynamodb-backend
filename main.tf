@@ -23,6 +23,7 @@ provider "aws" {
 module "remote_state" {
   source = "git@github.com:nozaq/terraform-aws-remote-state-s3-backend"
   enable_replication = false
+  dynamodb_deletion_protection_enabled = false
   providers = {
     aws         = aws
     aws.replica = aws.replica
