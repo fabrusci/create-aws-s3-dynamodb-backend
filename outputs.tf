@@ -12,3 +12,8 @@ output "dynamodb_table" {
   description = "The dynamodb table for state lock."
   value       = module.remote_state.dynamodb_table.name
 }
+
+output "aws_region" {
+  description = "AWS region."
+  value       = var.region
+}
