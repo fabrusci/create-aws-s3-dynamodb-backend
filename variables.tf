@@ -12,5 +12,5 @@ variable "replica_region" {
 }
 
 variable "profile" {
-   default =   "abruscidemo"
+   #default =   "abruscidemo"
 }
